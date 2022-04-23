@@ -1,0 +1,13 @@
+services:
+  minecraft-vanilla-java:
+    container_name: minecraft-vanilla-java
+    build: ./
+    image: pemugi/minecraft-vanilla-java
+    ports:
+      - 25565:25565
+    tty: true
+    stdin_open: true
+    volumes:
+      - type: bind
+        source: "./"
+        target: "/minecraft"
